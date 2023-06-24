@@ -1,13 +1,35 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@font-face {
+    font-family: 'SpecialElite';
+    src: url('./assets/fonts/SpecialElite-Regular.ttf');
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'SpecialElite';
+}
+
+:root {
+    --light-color: #F6F6F2;
+    --dark-color: #514C89;
+    --alert-color: #E7903C;
+    --transparency-color: rgba(0, 0, 0, 0.40);
+    --title-font-size: 40px;
+    --subtitle-font-size: 25px;
+    --button-font-size: 20px;
+    --text-font-size: 16px;
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+    text-decoration: none;
+    width: 90%;
+    text-align: center;
 }
