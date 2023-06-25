@@ -8,7 +8,6 @@ function MenuAuth() {
 
   const [toggle, setToggle] = useState(false);
 
-  
   return (
     <CtMenuAuth>
       <BtMenuAuth onClick={()=>setToggle(!toggle)}>
@@ -17,10 +16,9 @@ function MenuAuth() {
       {toggle &&
         <CtAuth>
           <Link to={'/signin'}><TxtNavSignIn>Registro</TxtNavSignIn></Link>
-          <Link to={'/login'}><TxtNavLogIn>Accesso</TxtNavLogIn></Link>
+          <Link to={'/login'}><TxtNavLogIn>Acceso</TxtNavLogIn></Link>
         </CtAuth>
       }
-      
     </CtMenuAuth>
   )
 }

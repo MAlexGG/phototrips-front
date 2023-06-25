@@ -6,6 +6,10 @@ export const CtMenuAuth = styled.div`
     flex-direction: column; 
     align-items: flex-end;
     width: 280px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    z-index: 1;
 `;
 
 export const BtMenuAuth = styled.button`
