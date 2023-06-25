@@ -1,8 +1,12 @@
 import React from 'react'
+import { CtLogin } from './Login.styled'
+import ContinentsBackground from '../../components/continentsBackground/ContinentsBackground'
 
 function LogIn() {
   return (
-    <div>logIn</div>
+    <CtLogin>
+      <ContinentsBackground isHover={false}/>
+    </CtLogin>
   )
 }
 
