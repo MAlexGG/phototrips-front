@@ -1,9 +1,13 @@
 import styled from "styled-components";
 
 export const CtBackground = styled.div`
-    display: grid;
-    grid-template-rows: repeat(5, 1fr);
     height: 100vh;
+`;
+
+export const CtImgBackground = styled.div`
+    width: 100vw;
+    height: 20%;
+    overflow: hidden;
 `;
 
 export const ImgBackground = styled.img`

@@ -6,10 +6,10 @@ export const CtHome = styled.div`
 `;
 
 export const TxtTitle = styled.h1`
-    font-size: 7.5rem;
+    font-size: 5rem;
     color: var(--light-color);
     position: absolute;
-    left: 20%;
-    top: 40%;
+    left: 32%;
+    top: 45%;
 `;
 
