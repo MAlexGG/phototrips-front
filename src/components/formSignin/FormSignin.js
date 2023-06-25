@@ -1,21 +1,24 @@
 import React from 'react'
-import { CtButtons, CtForm, CtInputs, TxtTitle } from './FormSignin.styled'
+import { CtButtons, CtContentForm, CtForm, CtInputs, TxtTitle } from './FormSignin.styled'
 import Button from '../button/Button'
 import Input from '../input/Input'
+import { Link } from 'react-router-dom'
 
 function FormSignin() {
   return (
     <CtForm>
+      <CtContentForm>
+        <TxtTitle>Registro de usuario</TxtTitle>
         <CtInputs>
-            <TxtTitle>Registro de usuario</TxtTitle>
-            <Input placeholder={'Nombre...'} type={'text'} label={'Nombre'}/>
-            <Input placeholder={'E-mail...'} type={'mail'} label={'E-mail'}/>
-            <Input placeholder={'Contraseña...'} type={'password'} label={'Contraseña'}/>
+          <Input placeholder={'Nombre...'} type={'text'} label={'Nombre'}/>
+          <Input placeholder={'E-mail...'} type={'mail'} label={'E-mail'}/>
+          <Input placeholder={'Contraseña...'} type={'password'} label={'Contraseña'}/>
         </CtInputs>
-        <CtButtons>
-            <Button text='Cancelar' bg={'var(--light-color)'} color={'var(--dark-color)'}/>
-            <Button text='Registrar'/>
-        </CtButtons>
+      </CtContentForm>
+      <CtButtons>
+        <Link to={'/'}><Button text='Cancelar' bg={'var(--light-color)'} color={'var(--dark-color)'}/></Link>
+        <Button text='Registrar'/>
+      </CtButtons>
     </CtForm>
   )
 }

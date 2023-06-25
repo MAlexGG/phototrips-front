@@ -18,13 +18,17 @@ export const ContainerForm = css`
     position: absolute;
 `;
 
-export const ContainerInputs = css`
+export const ContainerContentForm = css`
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     width: 354px;
     height: 354px;
     background-color: var(--dark-color);
+`;
 
+export const ContainerInputs = css`
+    ${ContainerFlex};
+    flex-direction: column;
 `;

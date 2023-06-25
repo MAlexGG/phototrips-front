@@ -5,6 +5,7 @@ export const CtInput = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    padding: 10px;
 `;
 
 export const Inpt = styled.input.attrs(props => ({
