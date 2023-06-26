@@ -1,9 +1,9 @@
 import React from 'react'
 import { Bt } from './Button.styled'
 
-function Button(props) {
+function Button({bg, color, text, event}) {
   return (
-    <Bt bg={props.bg} color={props.color}>{props.text}</Bt>
+    <Bt bg={bg} color={color} onClick={event}>{text}</Bt>
   )
 }
 

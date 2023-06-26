@@ -2,10 +2,18 @@ import React from 'react'
 import { CtButtons, CtContentForm, CtForm, CtInputs, TxtTitle } from './FormSignin.styled'
 import Button from '../button/Button'
 import Input from '../input/Input'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 function FormSignin() {
+
+  const navigate = useNavigate()
+
+  function goAlertPage(){
+    navigate('/alert');
+  }
+
   return (
+    <>
     <CtForm>
       <CtContentForm>
         <TxtTitle>Registro de usuario</TxtTitle>
@@ -17,9 +25,10 @@ function FormSignin() {
       </CtContentForm>
       <CtButtons>
         <Link to={'/'}><Button text='Cancelar' bg={'var(--light-color)'} color={'var(--dark-color)'}/></Link>
-        <Button text='Registrar'/>
+        <Button text='Registrar' event={goAlertPage}/>
       </CtButtons>
     </CtForm>
+    </>
   )
 }
 

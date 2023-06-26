@@ -22,15 +22,14 @@ export const BtMenuAuth = styled.button`
 export const CtAuth = styled.div`
     ${ContainerFlex};
     flex-direction: column;
-    width: 280px;
-    //height: 116px;
+    width: 215px;
     background-color: var(--light-color);
 `;
 
 const TxtNav = css`
     color: var(--dark-color);
     font-size: var(--subtitle-font-size);
-    padding: 19px;
+    padding: 10px;
 `;
 
 export const TxtNavSignIn = styled.p`

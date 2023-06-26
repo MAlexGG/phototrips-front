@@ -18,7 +18,7 @@ export const Inpt = styled.input.attrs(props => ({
     border: none;
     padding-left: 10px;
     color: var(--dark-color);
-    box-shadow: 0px 2px 7px 0px var(--transparency-color);
+    box-shadow: 0px 2px 7px 0px var(--transparency-color) inset;
 `;
 
 export const Labl = styled.label`
