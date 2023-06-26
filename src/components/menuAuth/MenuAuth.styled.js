@@ -24,6 +24,7 @@ export const CtAuth = styled.div`
     flex-direction: column;
     width: 215px;
     background-color: var(--light-color);
+    padding-top: 5px;
 `;
 
 const TxtNav = css`

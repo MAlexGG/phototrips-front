@@ -11,7 +11,7 @@ function MenuAuth() {
   return (
     <CtMenuAuth>
       <BtMenuAuth onClick={()=>setToggle(!toggle)}>
-        <img src={avatar} alt="register or login avatar" />
+        <img src={avatar} alt="user avatar" />
       </BtMenuAuth>
       {toggle &&
         <CtAuth>

@@ -7,11 +7,12 @@ import { useState } from 'react';
 function AlertPage() {
 
     const [isVisible, setIsVisible] = useState(true);
-
+    const [alertText, setAlertText] = useState('Este es un texto de prueba');
+  
   return (
     <CtAlertPage>
         <ContinentsBackground/>
-        <Alert isVisible={isVisible} setIsVisible={setIsVisible}/>
+        <Alert isVisible={isVisible} setIsVisible={setIsVisible} text={alertText}/>
     </CtAlertPage>
   )
 }

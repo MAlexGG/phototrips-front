@@ -20,6 +20,7 @@ export const BtClose = styled.button`
     right: 10px;    
     border: none;
     background-color: transparent;
+    cursor: pointer;
 `;
 
 export const ImgClose = styled.img`
