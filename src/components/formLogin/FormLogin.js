@@ -2,9 +2,15 @@ import React from 'react'
 import { CtButtons, CtContentForm, CtForm, CtInputs, TxtTitle } from './FormLogin.styled'
 import Input from '../input/Input'
 import Button from '../button/Button'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 function FormLogin() {
+
+  const navigate = useNavigate();
+
+  function goAlertPage(){
+    navigate('/alert', { state: {text: 'hola, es una prueba' }});
+  }
   return (
     <CtForm>
         <CtContentForm>
@@ -17,7 +23,7 @@ function FormLogin() {
         
         <CtButtons>
         <Link to={'/'}><Button text='Cancelar' bg={'var(--light-color)'} color={'var(--dark-color)'}/></Link>
-            <Button text='Acceder'/>
+            <Button text='Acceder' event={goAlertPage}/>
         </CtButtons>
     </CtForm>
     
