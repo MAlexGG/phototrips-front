@@ -12,7 +12,7 @@ This is a website for personal use, it's a photo album that shows your photos cl
 
 ### UI Design
 
-![phototrips](https://github.com/MAlexGG/phototrips-front/assets/73828751/565371b3-f6a2-4616-827f-aa0e8076c90d)
+![phototrips](https://github.com/MAlexGG/phototrips-front/assets/73828751/043f5830-99ed-4ed4-88f1-d10b114c4791)
 
 ## Technologies
 It was developed with react.js using react-router-dom, axios and styled-components, the UI was designed in Figma. 
