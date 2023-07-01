@@ -9,7 +9,7 @@ function FormSignin() {
   const navigate = useNavigate()
 
   function goAlertPage(){
-    navigate('/alert');
+    navigate('/alert', { state: {text: 'hola, es una prueba del sign in' }});
   }
 
   return (

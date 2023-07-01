@@ -5,6 +5,7 @@ import Error from '../pages/error/Error';
 import SignIn from '../pages/signIn/SignIn';
 import LogIn from '../pages/login/LogIn';
 import AlertPage from '../pages/alertPage/AlertPage';
+import Countries from '../pages/countries/Countries';
 
 const router = createBrowserRouter([
     {
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
     {
         path: "/alert",
         element: <AlertPage/>
+    },
+    {
+        path: "/countries",
+        element: <Countries/>
     }
 ]);
 

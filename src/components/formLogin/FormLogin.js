@@ -9,7 +9,7 @@ function FormLogin() {
   const navigate = useNavigate();
 
   function goAlertPage(){
-    navigate('/alert', { state: {text: 'hola, es una prueba' }});
+    navigate('/alert', { state: {text: 'hola, es una prueba del login' }});
   }
   return (
     <CtForm>
