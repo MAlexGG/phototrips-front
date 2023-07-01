@@ -6,6 +6,7 @@ import SignIn from '../pages/signIn/SignIn';
 import LogIn from '../pages/login/LogIn';
 import Countries from '../pages/countries/Countries';
 import Continents from '../pages/continents/Continents';
+import PrivateRoutes from '../utils/PrivateRoutes';
 
 const router = createBrowserRouter([
     {
@@ -23,11 +24,11 @@ const router = createBrowserRouter([
     },
     {
         path: "/continents",
-        element: <Continents/>
+        element: <PrivateRoutes><Continents/></PrivateRoutes>
     },
     {
         path: "/countries",
-        element: <Countries/>
+        element: <PrivateRoutes><Countries/></PrivateRoutes>
     }
 ]);
 
