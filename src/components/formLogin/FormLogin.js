@@ -16,14 +16,7 @@ function FormLogin() {
 
   const [login, setLogin] = useState(initialLogin);
   const [message, setMessage] = useState('');
-
-   
-
   const navigate = useNavigate();
-
-  /* function goAlertPage(){
-    navigate('/alert', { state: {text: 'hola, es una prueba del login' }});
-  } */
 
   const handleInput = (e) => {
     e.persist();
@@ -37,20 +30,17 @@ function FormLogin() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
     const data = {
       email: login.email,
       password: login.password,
     };
-
 
     axios.get('/sanctum/csrf-cookie').then(res => {
       authApi.postLogin(data).then(res => {
           localStorage.setItem('auth_token', res.data.token);
           localStorage.setItem('auth_user', res.data.user.name);
           setMessage(res.data.msg);
-        
-        //navigate('/alert', { state: {text: res.data.msg }});
+          navigate('/continents');
       }).catch(error => {
         setLogin({...login, error_list: error.response.data.errors});
         setMessage(error.response.data.errors.msg);

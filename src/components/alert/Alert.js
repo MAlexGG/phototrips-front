@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { BtClose, CtAlert, ImgClose } from './Alert.styled'
 import closeIcon from '../../assets/img/icons/noOk.svg'
 
-function Alert({isVisible, setIsVisible, text}) {
+function Alert({text}) {
+
+  const [isVisible, setIsVisible] = useState(true);
 
     function closeAlert(){
         setIsVisible(false);

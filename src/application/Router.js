@@ -4,8 +4,8 @@ import App from '../App';
 import Error from '../pages/error/Error';
 import SignIn from '../pages/signIn/SignIn';
 import LogIn from '../pages/login/LogIn';
-import AlertPage from '../pages/alertPage/AlertPage';
 import Countries from '../pages/countries/Countries';
+import Continents from '../pages/continents/Continents';
 
 const router = createBrowserRouter([
     {
@@ -22,8 +22,8 @@ const router = createBrowserRouter([
         element: <LogIn/>
     },
     {
-        path: "/alert",
-        element: <AlertPage/>
+        path: "/continents",
+        element: <Continents/>
     },
     {
         path: "/countries",
