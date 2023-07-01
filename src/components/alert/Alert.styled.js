@@ -12,6 +12,7 @@ export const CtAlert = styled.div`
     position: absolute;
     color: var(--dark-color);
     font-size: var(--subtitle-font-size);
+    text-align: center;
 `;
 
 export const BtClose = styled.button`

@@ -32,3 +32,32 @@ export const ContainerInputs = css`
     ${ContainerFlex};
     flex-direction: column;
 `;
+
+export const ContainerInput = css`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 10px;
+`;
+
+export const Input = css`
+    width: 270px;
+    height: 35px;
+    background: var(--light-color);
+    border: none;
+    padding-left: 10px;
+    color: var(--dark-color);
+    box-shadow: 0px 2px 7px 0px var(--transparency-color) inset;
+`;
+
+export const Label = css`
+    color: var(--light-color);
+    font-size: var(--text-font-size);
+`;
+
+export const TextError = css`
+    color: var(--alert-color);
+    font-size: var(--text-font-size);
+    width: 270px;
+`;
