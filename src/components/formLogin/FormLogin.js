@@ -27,7 +27,7 @@ function FormLogin() {
   };
 
   const authApi = AuthService();
-
+  
   const handleSubmit = (e) => {
     e.preventDefault();
     const data = {
@@ -45,11 +45,12 @@ function FormLogin() {
         setError(error.response.data.errors.msg);
       });
     });
+    setError('');
   };
 
-
   return (
-    <CtForm>
+    <>
+      <CtForm>
         <CtContentForm>
             <TxtTitle>Acceso de Usuario</TxtTitle>
             <CtInputs>
@@ -67,13 +68,13 @@ function FormLogin() {
         </CtContentForm>
         
         <CtButtons>
-        <Link to={'/'}><Button text='Cancelar' bg={'var(--light-color)'} color={'var(--dark-color)'}/></Link>
-            <Button text='Acceder' type={'submit'} event={handleSubmit}/>
+          <Link to={'/'}><Button text='Cancelar' bg={'var(--light-color)'} color={'var(--dark-color)'}/></Link>
+          <Button text='Acceder' type={'submit'} event={handleSubmit}/>
         </CtButtons>
-        {message && <Alert text={message} route={'/continents'}/>}
-        {error && <Alert text={error} type={'reset'}/>}
-    </CtForm>
-    
+      </CtForm>
+      {message && <Alert text={message} route={'/continents'}/>}
+      {error && <Alert text={error}/>}
+    </>
   )
 }
 

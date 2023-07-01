@@ -3,7 +3,7 @@ import { BtClose, CtAlert, ImgClose } from './Alert.styled'
 import closeIcon from '../../assets/img/icons/noOk.svg'
 import { useNavigate } from 'react-router-dom';
 
-function Alert({text, type, route}) {
+function Alert({text, route}) {
 
   const [isVisible, setIsVisible] = useState(true);
   const navigate = useNavigate(); 
@@ -15,7 +15,7 @@ function Alert({text, type, route}) {
 
   return (
     <CtAlert isVisible={isVisible}>
-        <BtClose onClick={closeAlert} type={type}>
+        <BtClose onClick={closeAlert}>
             <ImgClose src={closeIcon} alt='close button'/>
         </BtClose>
         {text}

@@ -58,6 +58,7 @@ export const Label = css`
 
 export const TextError = css`
     color: var(--alert-color);
-    font-size: var(--text-font-size);
+    font-size: var(--small-font-size);
     width: 270px;
+    margin-top: 5px;
 `;
