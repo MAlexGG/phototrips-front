@@ -67,4 +67,5 @@ export const TxtNavLogout = styled.button`
     ${TxtNav};
     border: none;
     background-color: transparent;
+    cursor: pointer;
 `;

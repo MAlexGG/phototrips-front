@@ -9,7 +9,7 @@ function Continents() {
     <CtContinents>
         <MenuNav/>
         <ContinentsBackground isHover={true}/>
-        <Alert isVisible={true} text='¿A cuál continente quieres ir?'/>
+        <Alert text='¿A cuál continente quieres ir?'/>
     </CtContinents>
   )
 }

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { CtButtons, CtContentForm, CtForm, CtInput, CtInputs, Inpt, Labl, TxtError, TxtTitle } from './FormLogin.styled';
 import Button from '../button/Button';
-import { Link , useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { AuthService } from '../../services/AuthService';
 import axios from 'axios';
 import Alert from '../alert/Alert';
@@ -16,7 +16,7 @@ function FormLogin() {
 
   const [login, setLogin] = useState(initialLogin);
   const [message, setMessage] = useState('');
-  const navigate = useNavigate();
+  const [error, setError] = useState('');
 
   const handleInput = (e) => {
     e.persist();
@@ -40,13 +40,11 @@ function FormLogin() {
           localStorage.setItem('auth_token', res.data.token);
           localStorage.setItem('auth_user', res.data.user.name);
           setMessage(res.data.msg);
-          navigate('/continents');
       }).catch(error => {
         setLogin({...login, error_list: error.response.data.errors});
-        setMessage(error.response.data.errors.msg);
-      })
-    })
-
+        setError(error.response.data.errors.msg);
+      });
+    });
   };
 
 
@@ -72,8 +70,8 @@ function FormLogin() {
         <Link to={'/'}><Button text='Cancelar' bg={'var(--light-color)'} color={'var(--dark-color)'}/></Link>
             <Button text='Acceder' type={'submit'} event={handleSubmit}/>
         </CtButtons>
-        {message && <Alert isVisible={true} text={message}/>}
-        
+        {message && <Alert text={message} route={'/continents'}/>}
+        {error && <Alert text={error} type={'reset'}/>}
     </CtForm>
     
   )

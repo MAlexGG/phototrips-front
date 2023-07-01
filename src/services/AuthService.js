@@ -14,7 +14,7 @@ axios.interceptors.request.use(function(config){
 export const AuthService = () => {
   const urlRegister = '/api/register';
   const urlLogin = '/api/login';
-  const urlLogout = 'apli/logout';
+  const urlLogout = 'api/logout';
 
   const postRegister = async (data) => {
     const res = await axios.post(urlRegister, data);
