@@ -35,7 +35,6 @@ const TxtNav = css`
 
 export const TxtNavSignIn = styled.p`
     ${TxtNav};
-    border-bottom: 2px solid var(--dark-color);
 `;
 
 export const TxtNavLogIn = styled.p`
